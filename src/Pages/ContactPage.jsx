@@ -54,10 +54,10 @@ const ContactPage = () => {
   return (
     <main className="min-h-screen py-16 bg-[#14213d]">
       <PageTitle title="Kontak Saya" />
-      <div className="container w-1/2 mx-auto flex gap-14 mt-11">
-        <div className="w-4/12">
+      <div className="container md:w-1/2 px-4 md:px-0 mx-auto md:flex gap-14 mt-11">
+        <div className="md:w-4/12 flex flex-col items-center">
           <img src={profile} alt="" />
-          <div className="flex mt-5 gap-4 items-center justify-center">
+          <div className="flex mt-5 gap-4 items-center justify-center mb-5">
             {socials.map((item, index) => {
               return (
                 <a href="#" key={index} className="text-gray-200">
@@ -67,7 +67,7 @@ const ContactPage = () => {
             })}
           </div>
         </div>
-        <div className="w-8/12">
+        <div className="md:w-8/12">
           <h3 className="text-white font-medium text-2xl mb-4">
             Hai Saya adalah Roni Taradipta
           </h3>

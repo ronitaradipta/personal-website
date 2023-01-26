@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const MenuList = ({ title, href }) => {
+const MenuList = ({ title, href, onClick }) => {
   return (
-    <li>
+    <li onClick={onClick}>
       {/* <Link to={href}>
         <span className="text-white font-medium text-base">{title}</span>
       </Link> */}

@@ -3,7 +3,7 @@ import HeroSection from "../components/HeroSection";
 
 const HomePage = () => {
   return (
-    <main className="overflow-hidden">
+    <main className="md:overflow-hidden">
       <HeroSection />
     </main>
   );

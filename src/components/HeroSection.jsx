@@ -39,15 +39,17 @@ const HeroSection = () => {
       }}
       className="h-[calc(100vh_-_5rem)] pt-10"
     >
-      <div className="container mx-auto flex justify-between px-36 flex-wrap">
+      <div className="container mx-auto md:flex justify-between px-4 md:px-36 flex-wrap mb-8 md:mb-0">
         <div
-          className={`w-1/2 pt-16 ease-in-out duration-300 ${
-            display ? "pt-16" : "pt-40"
+          className={`md:w-1/2 ease-in-out duration-300 ${
+            display ? "md:pt-16" : "md:pt-40"
           }`}
         >
-          <h3 className="text-lg text-white mb-2">Halo! Saya adalah</h3>
+          <h3 className="md:text-lg text-sm text-white mb-2">
+            Halo! Saya adalah
+          </h3>
           <span className="relative"></span>
-          <span className="text-[#fca311] text-5xl font-bold inline-flex h-20 pt-2 overflow-x-hidden animate-type-reverse whitespace-nowrap will-change-transform">
+          <span className="text-[#fca311] text-3xl md:text-5xl font-bold inline-flex h-20 pt-2 overflow-x-hidden animate-type-reverse whitespace-nowrap will-change-transform">
             Roni Taradipta
           </span>
           <span className="box-border inline-block w-1 h-10 ml-2 -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor will-change-transform"></span>
@@ -65,22 +67,22 @@ const HeroSection = () => {
           </button>
           {display && (
             <Link to="/portfolio">
-              <button className="border border-[#fca311] py-3 px-4 font-medium rounded-lg text-[#fca311] ml-5">
+              <button className="border border-[#fca311] py-3 px-4 font-medium rounded-lg text-[#fca311] mt-4 md:mt-0 md:ml-5">
                 Lihat Lainnya
               </button>
             </Link>
           )}
         </div>
-        <div className="w-1/2 flex justify-end">
+        <div className="w-1/2 hidden md:flex justify-end">
           <img src={hero} alt="hero image" />
         </div>
       </div>
       <div
-        className={`container mx-auto flex justify-between px-36 gap-6 ease-in-out duration-500 ${
-          display ? "opacity-100 -mt-48" : "opacity-0"
+        className={`container mx-auto flex flex-col md:flex-row justify-between md:px-36 px-6 gap-6 ease-in-out duration-500 ${
+          display ? "opacity-100 md:-mt-48" : "opacity-0"
         }`}
       >
-        <div className="flex gap-4 justify-center items-center  text-4xl rotate-[270deg] w-20">
+        <div className="flex gap-4 justify-center items-center  text-4xl md:rotate-[270deg] w-20">
           <div className="p-2 rounded-full bg-[#fca311] w-2 h-2 ring-8 ring-[#fca311] ring-opacity-20 animate-pulse"></div>
           <h2 className="font-medium text-white">Project</h2>
         </div>

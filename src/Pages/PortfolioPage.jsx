@@ -47,9 +47,9 @@ const PortfolioPage = () => {
 
   return (
     <main className="min-h-screen py-16 bg-[#14213d]">
-      <div className="container mx-auto px-36">
+      <div className="container mx-auto md:px-36 px-4">
         <PageTitle title="Portfolio" />
-        <div className="flex w-1/2 mx-auto mb-20 justify-center gap-16 relative">
+        <div className="md:flex md:w-1/2 mx-auto md:mb-20 mb-5 md:justify-center md:gap-16 relative grid grid-cols-3">
           {tabData.map((item, index) => {
             return (
               <button
@@ -66,7 +66,7 @@ const PortfolioPage = () => {
             );
           })}
         </div>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-6">
           {activeTabIndex === 0 &&
             portFolioImg.map((item, index) => {
               return <PortfolioCard items={item} key={index} />;
