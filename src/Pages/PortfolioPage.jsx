@@ -3,47 +3,75 @@ import PortfolioCard from "../components/elements/PortfolioCard";
 import republik from "../assets/republikrupiah.png";
 import chainlords from "../assets/chainlords.png";
 import kerjai from "../assets/kerjai.png";
-import sitanggap from "../assets/sitanggap.png";
-import movie from "../assets/movie-app.png";
+import ourMovies from "../assets/our-movies.png";
 import bookshelf from "../assets/bookshelf.png";
+import nextCommerceV2 from "../assets/nextcommerce-v2.png";
+import nextCommerceV1 from "../assets/nextcommerce.png";
+import mealMap from "../assets/meal-map.png";
+import library from "../assets/library.png";
 import PageTitle from "../components/elements/PageTitle";
 
 const PortfolioPage = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const portFolioImg = [
     {
-      src: republik,
-      title: "Republikrupiah",
-      tech: "php",
+      src: nextCommerceV1,
+      title: "NextCommerce",
+      tech: "javascript",
+      link: "https://next-commerce-a7qoj1ouq-taradiptaroni.vercel.app/",
     },
-    {
-      src: chainlords,
-      title: "Chainlords",
-      tech: "php",
-    },
+
     {
       src: kerjai,
       title: "Kerjai",
       tech: "javascript",
+      link: "https://kerjai.netlify.app/",
     },
     {
-      src: sitanggap,
-      title: "Sitanggap",
-      tech: "uiux",
+      src: ourMovies,
+      title: "Our Movies",
+      tech: "javascript",
+      link: "https://our-movies.netlify.app/",
     },
     {
       src: bookshelf,
       title: "Bookshelf App",
       tech: "javascript",
+      link: "https://bookshelf-28917.netlify.app/",
     },
     {
-      src: movie,
-      title: "Movie App",
+      src: nextCommerceV2,
+      title: "NextCommerce V2",
       tech: "javascript",
+      link: "https://next-commerce-client.vercel.app/",
+    },
+    {
+      src: mealMap,
+      title: "Meal Map",
+      tech: "javascript",
+      link: "https://meal-map-restaurant.netlify.app/",
+    },
+    {
+      src: library,
+      title: "The Library",
+      tech: "php",
+      link: "https://github.com/ronitaradipta/the-library",
+    },
+    {
+      src: republik,
+      title: "Republikrupiah",
+      tech: "php",
+      link: "https://republikrupiah.com",
+    },
+    {
+      src: chainlords,
+      title: "Chainlords",
+      tech: "php",
+      link: "#",
     },
   ];
 
-  const tabData = ["All Projects", "Javascript", "PHP", "UI/UX"];
+  const tabData = ["All Projects", "Javascript", "PHP"];
 
   return (
     <main className="min-h-screen py-16 bg-[#14213d]">

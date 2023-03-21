@@ -2,26 +2,27 @@ import React, { useState } from "react";
 import background from "../assets/background.png";
 import hero from "../assets/hero-img.png";
 import PortfolioCard from "./elements/PortfolioCard";
-import republik from "../assets/republikrupiah.png";
-import chainlords from "../assets/chainlords.png";
-import kerjai from "../assets/kerjai.png";
+import mealMap from "../assets/meal-map.png";
+import nextCommerce from "../assets/nextcommerce-v2.png";
+import ourMovies from "../assets/our-movies.png";
 import { Link } from "react-router-dom";
+import { BsGithub } from "react-icons/bs";
 
 const HeroSection = () => {
   const [display, setDisplay] = useState(false);
 
   const portFolioImg = [
     {
-      src: republik,
-      title: "Republikrupiah",
+      src: mealMap,
+      title: "Meal Map",
     },
     {
-      src: chainlords,
-      title: "Chainlords",
+      src: nextCommerce,
+      title: "NextCommerce",
     },
     {
-      src: kerjai,
-      title: "Kerjai",
+      src: ourMovies,
+      title: "Our Movies",
     },
   ];
 
@@ -39,7 +40,7 @@ const HeroSection = () => {
       }}
       className="h-[calc(100vh_-_5rem)] pt-10"
     >
-      <div className="container mx-auto md:flex justify-between px-4 md:px-36 flex-wrap mb-8 md:mb-0">
+      <div className="container mx-auto md:flex justify-between px-4 md:px-36 flex-wrap mb-8 md:mb-0 animate-fadeIn">
         <div
           className={`md:w-1/2 ease-in-out duration-300 ${
             display ? "md:pt-16" : "md:pt-40"
@@ -65,6 +66,17 @@ const HeroSection = () => {
             {!display && "Lihat Portfolio"}
             {display && "Sembunyikan Portfolio"}
           </button>
+          {!display && (
+            <button className="border-[#fca311] border font-medium rounded-lg text-[#fca311] ml-3">
+              <a
+                href="https://github.com/ronitaradipta"
+                className="flex gap-3 items-center py-3 px-4"
+              >
+                <BsGithub />
+                Github
+              </a>
+            </button>
+          )}
           {display && (
             <Link to="/portfolio">
               <button className="border border-[#fca311] py-3 px-4 font-medium rounded-lg text-[#fca311] mt-4 md:mt-0 md:ml-5">

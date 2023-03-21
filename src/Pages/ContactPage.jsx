@@ -1,54 +1,43 @@
 import React from "react";
 import profile from "../assets/profile-img.png";
 import PageTitle from "../components/elements/PageTitle";
-import js from "../assets/logo-skill/javascript.png";
-import css from "../assets/logo-skill/css.png";
-import react from "../assets/logo-skill/reactjs.png";
-import wordpress from "../assets/logo-skill/wordpress.png";
-import html from "../assets/logo-skill/html.png";
-import figma from "../assets/logo-skill/figma.png";
-import {
-  BsFacebook,
-  BsInstagram,
-  BsDiscord,
-  BsLinkedin,
-  BsGithub,
-} from "react-icons/bs";
+import { BsLinkedin, BsGithub, BsWordpress } from "react-icons/bs";
+import { GrReactjs } from "react-icons/gr";
+import { SiNextdotjs, SiLaravel, SiExpress } from "react-icons/si";
 
 const ContactPage = () => {
   const imgSkill = [
     {
-      title: "Javascript",
-      img: js,
+      title: "Next Js",
+      img: <SiNextdotjs className="h-6 w-6 text-[#FCA311]" />,
     },
     {
-      title: "CSS",
-      img: css,
+      title: "React Js",
+      img: <GrReactjs className="h-6 w-6 text-[#FCA311]" />,
     },
     {
-      title: "React JS",
-      img: react,
+      title: "Express Js",
+      img: <SiExpress className="h-6 w-6 text-[#FCA311]" />,
     },
     {
-      title: "Html",
-      img: html,
-    },
-    {
-      title: "Figma",
-      img: figma,
+      title: "Laravel",
+      img: <SiLaravel className="h-6 w-6 text-[#FCA311]" />,
     },
     {
       title: "Wordpress",
-      img: wordpress,
+      img: <BsWordpress className="h-6 w-6 text-[#FCA311]" />,
     },
   ];
 
   const socials = [
-    <BsFacebook className="w-5 h-5" />,
-    <BsInstagram className="w-5 h-5" />,
-    <BsDiscord className="w-5 h-5" />,
-    <BsLinkedin className="w-5 h-5" />,
-    <BsGithub className="w-5 h-5" />,
+    {
+      icon: <BsLinkedin className="w-8 h-8" />,
+      link: "https://www.linkedin.com/in/roni-taradipta-6b0151217/",
+    },
+    {
+      icon: <BsGithub className="w-8 h-8" />,
+      link: "https://github.com/ronitaradipta",
+    },
   ];
 
   return (
@@ -61,7 +50,7 @@ const ContactPage = () => {
             {socials.map((item, index) => {
               return (
                 <a href="#" key={index} className="text-gray-200">
-                  {item}
+                  {item.icon}
                 </a>
               );
             })}
@@ -81,12 +70,11 @@ const ContactPage = () => {
           <p className="text-gray-300 text-sm mt-4">
             Beberapa keahlian utama saya adalah :
           </p>
-          <ul className="text-gray-300 mt-4">
+          <ul className="text-gray-300 mt-8 grid grid-cols-3 gap-8">
             {imgSkill.map((item, index) => {
               return (
-                <li className="flex gap-3 items-center mt-1" key={index}>
-                  <img src={item.img} alt="img" className="w-4 h-4" />{" "}
-                  {item.title}
+                <li className="flex gap-3 items-center" key={index}>
+                  {item.img} {item.title}
                 </li>
               );
             })}
