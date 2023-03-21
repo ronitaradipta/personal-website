@@ -49,7 +49,7 @@ const ContactPage = () => {
           <div className="flex mt-5 gap-4 items-center justify-center mb-5">
             {socials.map((item, index) => {
               return (
-                <a href="#" key={index} className="text-gray-200">
+                <a href={item.link} key={index} className="text-gray-200">
                   {item.icon}
                 </a>
               );
