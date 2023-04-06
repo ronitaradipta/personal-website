@@ -32,7 +32,7 @@ const ContactPage = () => {
   const socials = [
     {
       icon: <BsLinkedin className="w-8 h-8" />,
-      link: "https://www.linkedin.com/in/roni-taradipta-6b0151217/",
+      link: "https://www.linkedin.com/in/ronitaradipta",
     },
     {
       icon: <BsGithub className="w-8 h-8" />,
@@ -42,8 +42,8 @@ const ContactPage = () => {
 
   return (
     <main className="min-h-screen py-16 bg-[#14213d]">
-      <PageTitle title="Kontak Saya" />
-      <div className="container md:w-1/2 px-4 md:px-0 mx-auto md:flex gap-14 mt-11">
+      <PageTitle title="My Contact" />
+      <div className="container md:w-1/2 px-4 md:px-0 mx-auto md:flex gap-14 mt-11 animate-fadeIn">
         <div className="md:w-4/12 flex flex-col items-center">
           <img src={profile} alt="" />
           <div className="flex mt-5 gap-4 items-center justify-center mb-5">
@@ -58,17 +58,16 @@ const ContactPage = () => {
         </div>
         <div className="md:w-8/12">
           <h3 className="text-white font-medium text-2xl mb-4">
-            Hai Saya adalah Roni Taradipta
+            Hello, my name is Roni Taradipta.
           </h3>
           <p className="text-gray-300 text-sm">
-            Saya adalah seorang web developer yang berpengalaman dan
-            berdedikasi. Saya telah mengembangkan berbagai macam proyek web,
-            mulai dari aplikasi web sederhana hingga aplikasi web kompleks. Di
-            sini Anda dapat melihat beberapa proyek yang telah saya kerjakan dan
-            mempelajari lebih lanjut tentang kemampuan saya.
+            I am an experienced and dedicated web developer who has developed
+            various web projects, ranging from simple to complex applications.
+            Here, you can view some of the projects I have worked on and learn
+            more about my skills.
           </p>
           <p className="text-gray-300 text-sm mt-4">
-            Beberapa keahlian utama saya adalah :
+            Some of my core competencies are:
           </p>
           <ul className="text-gray-300 mt-8 grid grid-cols-3 gap-8">
             {imgSkill.map((item, index) => {

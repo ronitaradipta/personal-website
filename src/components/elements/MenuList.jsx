@@ -4,9 +4,6 @@ import { NavLink } from "react-router-dom";
 const MenuList = ({ title, href, onClick }) => {
   return (
     <li onClick={onClick}>
-      {/* <Link to={href}>
-        <span className="text-white font-medium text-base">{title}</span>
-      </Link> */}
       <NavLink
         to={href}
         className={({ isActive, isPending }) =>

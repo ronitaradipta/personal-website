@@ -38,51 +38,62 @@ const HeroSection = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="h-[calc(100vh_-_5rem)] pt-10"
+      className={`${
+        !display && " overflow-hidden h-[calc(100vh_-_5rem)]"
+      } md:h-[calc(100vh_-_5rem)] pt-10`}
     >
       <div className="container mx-auto md:flex justify-between px-4 md:px-36 flex-wrap mb-8 md:mb-0 animate-fadeIn">
         <div
           className={`md:w-1/2 ease-in-out duration-300 ${
-            display ? "md:pt-16" : "md:pt-40"
+            display ? "md:pt-16" : "md:pt-40 pt-28"
           }`}
         >
-          <h3 className="md:text-lg text-sm text-white mb-2">
-            Halo! Saya adalah
-          </h3>
+          <h3 className="md:text-lg text-sm text-white mb-2">Hello! I'm</h3>
           <span className="relative"></span>
           <span className="text-[#fca311] text-3xl md:text-5xl font-bold inline-flex h-20 pt-2 overflow-x-hidden animate-type-reverse whitespace-nowrap will-change-transform">
             Roni Taradipta
           </span>
           <span className="box-border inline-block w-1 h-10 ml-2 -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor will-change-transform"></span>
           <p className="text-[#E5E5E5] text-base font-thin mb-5">
-            Selamat datang di Personal Web saya.
-            <br /> Klik tombol di bawah ini untuk melihat beberapa karya
-            tearbaik yang pernah saya buat
+            Welcome to my Personal Website.
+            <br />
+            Click the button below to view some of my best works that I have
+            created.
           </p>
-          <button
-            className="bg-[#fca311] py-3 px-4 font-medium rounded-lg text-[#14213d]"
-            onClick={showPorto}
-          >
-            {!display && "Lihat Portfolio"}
-            {display && "Sembunyikan Portfolio"}
-          </button>
+
           {!display && (
-            <button className="border-[#fca311] border font-medium rounded-lg text-[#fca311] ml-3">
-              <a
-                href="https://github.com/ronitaradipta"
-                className="flex gap-3 items-center py-3 px-4"
+            <div className="flex items-center gap-3">
+              <button
+                className="bg-[#fca311] py-3 px-4 font-medium rounded-lg text-[#14213d]"
+                onClick={showPorto}
               >
-                <BsGithub />
-                Github
-              </a>
-            </button>
+                View Portfolio
+              </button>
+              <button className="border-[#fca311] border font-medium rounded-lg text-[#fca311]">
+                <a
+                  href="https://github.com/ronitaradipta"
+                  className="flex gap-3 items-center py-3 px-4"
+                >
+                  <BsGithub />
+                  Github
+                </a>
+              </button>
+            </div>
           )}
           {display && (
-            <Link to="/portfolio">
-              <button className="border border-[#fca311] py-3 px-4 font-medium rounded-lg text-[#fca311] mt-4 md:mt-0 md:ml-5">
-                Lihat Lainnya
+            <div className="flex items-center gap-3">
+              <button
+                className="bg-[#fca311] py-3 px-4 font-medium rounded-lg text-[#14213d]"
+                onClick={showPorto}
+              >
+                Hide Portfolio
               </button>
-            </Link>
+              <Link to="/portfolio">
+                <button className="border border-[#fca311] py-3 px-4 font-medium rounded-lg text-[#fca311] md:mt-0 md:ml-5">
+                  View More
+                </button>
+              </Link>
+            </div>
           )}
         </div>
         <div className="w-1/2 hidden md:flex justify-end">

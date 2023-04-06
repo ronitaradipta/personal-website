@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import MenuList from "./elements/MenuList";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -15,8 +16,8 @@ const NavBar = () => {
       href: "/portfolio",
     },
     {
-      title: "Kontak",
-      href: "/kontak",
+      title: "Contact",
+      href: "/contact",
     },
   ];
 
@@ -30,9 +31,9 @@ const NavBar = () => {
   return (
     <header className="sticky top-0 z-20 bg-[#14213d] px-4">
       <nav className="container mx-auto flex justify-between items-center h-20 relative">
-        <div>
+        <Link to="/">
           <img src={logo} alt="logo" />
-        </div>
+        </Link>
         <div>
           <button
             id="btn-toggle"
