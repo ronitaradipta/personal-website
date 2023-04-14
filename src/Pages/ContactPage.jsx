@@ -1,9 +1,10 @@
 import React from "react";
 import profile from "../assets/profile-img.png";
 import PageTitle from "../components/elements/PageTitle";
-import { BsLinkedin, BsGithub, BsWordpress } from "react-icons/bs";
 import { GrReactjs } from "react-icons/gr";
 import { SiNextdotjs, SiLaravel, SiExpress } from "react-icons/si";
+import { BsWordpress } from "react-icons/bs";
+import SocialsIcons from "../components/elements/Socials";
 
 const ContactPage = () => {
   const imgSkill = [
@@ -29,17 +30,6 @@ const ContactPage = () => {
     },
   ];
 
-  const socials = [
-    {
-      icon: <BsLinkedin className="w-8 h-8" />,
-      link: "https://www.linkedin.com/in/ronitaradipta",
-    },
-    {
-      icon: <BsGithub className="w-8 h-8" />,
-      link: "https://github.com/ronitaradipta",
-    },
-  ];
-
   return (
     <main className="min-h-screen py-16 bg-[#14213d]">
       <PageTitle title="My Contact" />
@@ -47,13 +37,7 @@ const ContactPage = () => {
         <div className="md:w-4/12 flex flex-col items-center">
           <img src={profile} alt="" />
           <div className="flex mt-5 gap-4 items-center justify-center mb-5">
-            {socials.map((item, index) => {
-              return (
-                <a href={item.link} key={index} className="text-gray-200">
-                  {item.icon}
-                </a>
-              );
-            })}
+            <SocialsIcons />
           </div>
         </div>
         <div className="md:w-8/12">
