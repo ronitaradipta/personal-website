@@ -9,6 +9,8 @@ import nextCommerceV2 from "../assets/nextcommerce-v2.png";
 import nextCommerceV1 from "../assets/nextcommerce.png";
 import mealMap from "../assets/meal-map.png";
 import library from "../assets/library.png";
+import ekta from "../assets/ekta-academy.png";
+import nuggetsnews from "../assets/nuggetsnews.png";
 import PageTitle from "../components/elements/PageTitle";
 
 const PortfolioPage = () => {
@@ -67,7 +69,19 @@ const PortfolioPage = () => {
       src: chainlords,
       title: "Chainlords",
       tech: "php",
-      link: "#",
+      link: "https://chainlords.io",
+    },
+    {
+      src: nuggetsnews,
+      title: "NuggetsNews",
+      tech: "php",
+      link: "https://nuggets.blocklibrary.io/",
+    },
+    {
+      src: ekta,
+      title: "Ekta Academy",
+      tech: "php",
+      link: "https://academy.ekta.io/",
     },
   ];
 

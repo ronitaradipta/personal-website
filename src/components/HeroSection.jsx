@@ -5,6 +5,10 @@ import PortfolioCard from "./elements/PortfolioCard";
 import mealMap from "../assets/meal-map.png";
 import nextCommerce from "../assets/nextcommerce-v2.png";
 import ourMovies from "../assets/our-movies.png";
+import ekta from "../assets/ekta-academy.png";
+import republik from "../assets/republikrupiah.png";
+import chainlords from "../assets/chainlords.png";
+
 import { Link } from "react-router-dom";
 import { BsGithub } from "react-icons/bs";
 import SocialsIcons from "./elements/Socials";
@@ -14,16 +18,20 @@ const HeroSection = () => {
 
   const portFolioImg = [
     {
-      src: mealMap,
-      title: "Meal Map",
+      src: republik,
+      title: "Republikrupiah",
+      tech: "php",
+      link: "https://republikrupiah.com",
     },
     {
-      src: nextCommerce,
-      title: "NextCommerce",
+      src: chainlords,
+      title: "Chainlords",
+      tech: "php",
+      link: "https://chainlords.io",
     },
     {
-      src: ourMovies,
-      title: "Our Movies",
+      src: ekta,
+      title: "Ekta Academy",
     },
   ];
 
